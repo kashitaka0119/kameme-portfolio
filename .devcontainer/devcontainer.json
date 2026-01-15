@@ -1,0 +1,54 @@
+{
+  "name": "Kamame Portfolio",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers-contrib/features/npm-package:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "anthropic.claude-code",
+        "formulahendry.auto-rename-tag",
+        "christian-kohler.path-intellisense",
+        "mikestead.dotenv",
+        "usernamehw.errorlens",
+        "yoavbls.pretty-ts-errors",
+        "mhutchie.git-graph"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit",
+          "source.organizeImports": "explicit"
+        },
+        "typescript.preferences.importModuleSpecifier": "non-relative",
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        "editor.quickSuggestions": {
+          "strings": true
+        },
+        "tailwindCSS.experimental.classRegex": [
+          ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+        ],
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "files.associations": {
+          "*.css": "tailwindcss"
+        },
+        "editor.linkedEditing": true
+      }
+    }
+  },
+  "forwardPorts": [3000],
+  "postCreateCommand": "npm install && npm install -g @anthropic-ai/claude-code && npm install -g vercel",
+  "remoteUser": "node",
+  "mounts": [],
+  "env": {
+    "NODE_ENV": "development",
+    "NEXT_TELEMETRY_DISABLED": "1"
+  }
+}
+

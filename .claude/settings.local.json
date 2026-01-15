@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "*",
+      "Bash(vercel:*)",
+      "Bash(printf:*)",
+      "Bash(cat:*)",
+      "Bash(npm install:*)",
+      "Bash(xargs cat:*)",
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(sudo mkdir:*)",
+      "Bash(sudo chown:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npm init:*)",
+      "Bash(lsof:*)",
+      "Bash(ss:*)",
+      "Bash(netstat:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}
