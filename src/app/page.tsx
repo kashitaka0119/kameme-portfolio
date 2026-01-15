@@ -1,12 +1,29 @@
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import HeroSection from '@/components/sections/HeroSection'
+import SkillsSection from '@/components/sections/SkillsSection'
+import ExperienceSection from '@/components/sections/ExperienceSection'
+import ServicesSection from '@/components/sections/ServicesSection'
+import ContactSection from '@/components/sections/ContactSection'
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Kamame Portfolio</h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400">
-          Welcome to my portfolio website
-        </p>
-      </div>
-    </main>
-  );
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-primary text-white p-2 z-50"
+      >
+        メインコンテンツへスキップ
+      </a>
+      <Header />
+      <main id="main-content">
+        <HeroSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <ServicesSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </>
+  )
 }

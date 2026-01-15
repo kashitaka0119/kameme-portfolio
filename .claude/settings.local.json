@@ -18,7 +18,8 @@
       "Bash(lsof:*)",
       "Bash(ss:*)",
       "Bash(netstat:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(npm run dev:*)"
     ]
   }
 }

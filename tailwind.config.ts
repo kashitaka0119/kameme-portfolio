@@ -11,6 +11,20 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+        border: "var(--border)",
+        card: "var(--card)",
+      },
+      fontFamily: {
+        sans: ['var(--font-noto-sans-jp)', 'sans-serif'],
+      },
+      maxWidth: {
+        container: 'var(--container-max-width)',
+      },
+      spacing: {
+        section: 'var(--section-padding)',
       },
     },
   },
