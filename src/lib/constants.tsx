@@ -11,7 +11,7 @@ import {
   HiOutlineServer,
   HiOutlineSparkles,
   HiOutlineCog,
-  HiOutlineChartBar
+  HiOutlineTable,
 } from 'react-icons/hi'
 import type { Skill, Experience, Service } from '@/types'
 
@@ -33,13 +33,18 @@ export const SKILLS: Skill[] = [
   },
   {
     category: 'データベース',
-    items: ['PostgreSQL', 'Oracle', 'InfluxDB'],
+    items: ['PostgreSQL', 'Oracle'],
     icon: <HiOutlineServer className="text-3xl" />,
   },
   {
     category: 'AI/開発ツール',
     items: ['Claude Code', 'Cursor', 'GitHub Copilot', 'Git'],
     icon: <HiOutlineSparkles className="text-3xl" />,
+  },
+  {
+    category: 'Office/業務効率化',
+    items: ['Excel自動化(VBA)', 'Access', 'Word'],
+    icon: <HiOutlineTable className="text-3xl" />,
   },
 ]
 
@@ -53,12 +58,8 @@ export const EXPERIENCES: Experience[] = [
     description: 'Azure環境でのインフラ設計・構築、CI/CDパイプラインの整備、コンテナ化による運用効率化。',
   },
   {
-    title: 'Grafanaダッシュボード構築',
-    description: 'システム監視・分析のためのGrafanaダッシュボード設計・実装、データ可視化による意思決定支援。',
-  },
-  {
-    title: '時系列データ管理システム',
-    description: 'InfluxDBを活用した時系列データの収集・蓄積・分析システムの設計・開発。',
+    title: 'Excel/Access業務効率化',
+    description: 'VBAによるExcel作業の自動化、Accessデータベース構築で日々の業務を効率化。',
   },
 ]
 
@@ -106,6 +107,17 @@ export const SERVICES: Service[] = [
       'ベストプラクティスの共有',
     ],
     icon: <HiOutlineSparkles className="text-4xl" />,
+  },
+  {
+    title: 'Excel/Access業務効率化',
+    description: '日々の手作業をVBAマクロやAccessで自動化し、業務時間を削減',
+    features: [
+      'Excel VBAによる作業自動化',
+      'Accessデータベース構築',
+      'Word文書の自動生成',
+      '既存ファイルの改修・機能追加',
+    ],
+    icon: <HiOutlineTable className="text-4xl" />,
   },
 ]
 
