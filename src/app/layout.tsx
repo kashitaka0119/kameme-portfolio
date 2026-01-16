@@ -1,14 +1,28 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from 'next/font/google';
+import localFont from 'next/font/local';
 import "./globals.css";
 
-const notoSansJP = Noto_Sans_JP({
-  weight: ['400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
+const notoSansJP = localFont({
+  src: [
+    {
+      path: '../../public/fonts/NotoSansJP-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/NotoSansJP-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/NotoSansJP-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
   variable: '--font-noto-sans-jp',
-  fallback: ['sans-serif'],
-  adjustFontFallback: false,
+  display: 'swap',
+  fallback: ['Hiragino Sans', 'Yu Gothic', 'Meiryo', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
