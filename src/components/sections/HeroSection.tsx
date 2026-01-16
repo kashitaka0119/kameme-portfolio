@@ -31,11 +31,14 @@ export default function HeroSection() {
 
         {/* キャッチコピー */}
         <p className="text-xl md:text-2xl text-primary font-semibold mb-8">
-          20年以上の業務システム開発経験を持つフルスタックエンジニア
+          Excel作業の自動化で時間を節約。パソコンのお悩み解決します。
+          <br />
+          相談・お見積り無料、全額返金保証。
         </p>
 
         {/* 自己紹介 */}
         <div className="text-lg md:text-xl text-secondary space-y-3 mb-12 max-w-3xl mx-auto">
+          <p>20年以上の業務システム開発経験を持つフルスタックエンジニア</p>
           <p>ITエンジニア＋保育補助のダブルワークをしています。</p>
           <p>
             専門はバックエンド（Python/Django）ですが、フロントエンド（Next.js）やクラウド（Azure）も対応可能です。
