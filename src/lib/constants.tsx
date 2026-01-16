@@ -65,6 +65,19 @@ export const EXPERIENCES: Experience[] = [
 
 export const SERVICES: Service[] = [
   {
+    title: 'ホームページ作成',
+    description: '企業・個人向けのホームページを制作。デザインから公開まで一貫対応',
+    features: [
+      'レスポンシブデザイン（スマホ対応）',
+      'SEO対策・検索エンジン最適化',
+      'お問い合わせフォーム設置',
+      '更新・保守サポート',
+    ],
+    icon: <HiOutlineCode className="text-4xl" />,
+    price: '¥150,000〜',
+    priceNote: 'デザイン・ページ数により変動',
+  },
+  {
     title: 'Webアプリケーション開発',
     description: 'Next.jsとDjangoを活用したモダンなWebアプリケーション開発',
     features: [
@@ -74,6 +87,8 @@ export const SERVICES: Service[] = [
       'パフォーマンス最適化',
     ],
     icon: <HiOutlineCode className="text-4xl" />,
+    price: '¥300,000〜',
+    priceNote: '規模・機能により変動',
   },
   {
     title: 'Azure環境構築・移行支援',
@@ -85,10 +100,12 @@ export const SERVICES: Service[] = [
       'セキュリティ対策・監視設定',
     ],
     icon: <HiOutlineCloud className="text-4xl" />,
+    price: '¥200,000〜',
+    priceNote: '環境規模により変動',
   },
   {
-    title: '業務システムのモダナイゼーション',
-    description: 'レガシーシステムの刷新と最新技術への移行',
+    title: '旧システムのリプレイス',
+    description: '古いシステムを最新技術で刷新し、使いやすく生まれ変わらせます',
     features: [
       '既存システムの分析・評価',
       '最適な技術スタック提案',
@@ -96,6 +113,8 @@ export const SERVICES: Service[] = [
       '運用・保守性の向上',
     ],
     icon: <HiOutlineCog className="text-4xl" />,
+    price: '¥300,000〜',
+    priceNote: '要件定義後にお見積り',
   },
   {
     title: 'AIツールを活用した開発効率化支援',
@@ -107,6 +126,8 @@ export const SERVICES: Service[] = [
       'ベストプラクティスの共有',
     ],
     icon: <HiOutlineSparkles className="text-4xl" />,
+    price: '¥100,000〜',
+    priceNote: '導入支援・研修含む',
   },
   {
     title: 'Excel/Access業務効率化',
@@ -118,6 +139,8 @@ export const SERVICES: Service[] = [
       '既存ファイルの改修・機能追加',
     ],
     icon: <HiOutlineTable className="text-4xl" />,
+    price: '¥30,000〜',
+    priceNote: '小規模案件も対応可',
   },
 ]
 

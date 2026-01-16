@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     // メール送信
     console.log('📤 Resendでメール送信開始...')
     const data = await resend.emails.send({
-      from: 'お問い合わせフォーム <onboarding@resend.dev>',
+      from: 'お問い合わせフォーム <noreply@kameme.jp>',
       to: process.env.CONTACT_EMAIL || 'your-email@example.com',
       subject: `【ポートフォリオ】${name}様からお問い合わせ`,
       text: `

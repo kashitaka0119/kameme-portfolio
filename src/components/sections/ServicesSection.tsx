@@ -12,15 +12,27 @@ export default function ServicesSection() {
         {SERVICES.map((service, index) => (
           <div
             key={index}
-            className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
+            className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 flex flex-col"
           >
             {/* アイコン */}
             <div className="text-primary mb-4">{service.icon}</div>
 
             {/* タイトル */}
-            <h3 className="text-2xl font-semibold mb-3 text-foreground">
+            <h3 className="text-2xl font-semibold mb-2 text-foreground">
               {service.title}
             </h3>
+
+            {/* 料金 */}
+            <div className="mb-4">
+              <span className="text-3xl font-bold text-primary">
+                {service.price}
+              </span>
+              {service.priceNote && (
+                <p className="text-sm text-secondary mt-1">
+                  ※{service.priceNote}
+                </p>
+              )}
+            </div>
 
             {/* 説明 */}
             <p className="text-secondary mb-4 leading-relaxed">
@@ -28,7 +40,7 @@ export default function ServicesSection() {
             </p>
 
             {/* 機能リスト */}
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-6 grow">
               {service.features.map((feature, featureIndex) => (
                 <li key={featureIndex} className="flex items-start gap-2">
                   <span className="text-accent mt-1">✓</span>
@@ -36,6 +48,14 @@ export default function ServicesSection() {
                 </li>
               ))}
             </ul>
+
+            {/* CTAボタン */}
+            <a
+              href="#contact"
+              className="inline-block w-full text-center bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+            >
+              相談する
+            </a>
           </div>
         ))}
       </div>

@@ -14,6 +14,8 @@ export interface Service {
   description: string;
   features: string[];
   icon: React.ReactNode;
+  price: string;
+  priceNote?: string;
 }
 
 export interface ContactFormData {
