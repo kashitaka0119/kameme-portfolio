@@ -1,2 +1,6 @@
 git config --global user.email "kameme@kameme.com"
 git config --global user.name "kameme"
+
+■デプロイ
+vercel login
+vercel --prod --yes
