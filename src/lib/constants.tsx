@@ -18,7 +18,7 @@ import type { Skill, Experience, Service } from '@/types'
 export const SKILLS: Skill[] = [
   {
     category: 'バックエンド',
-    items: ['Python', 'Django', 'REST API', 'FastAPI'],
+    items: ['Python', 'Django', 'REST API'],
     icon: <SiPython className="text-3xl" />,
   },
   {
@@ -28,12 +28,12 @@ export const SKILLS: Skill[] = [
   },
   {
     category: 'クラウド',
-    items: ['Azure App Service', 'Container Registry', 'Azure Functions'],
+    items: ['Azure App Service', 'Container Registry', 'Azure Functions', '仮想VM'],
     icon: <HiOutlineCloud className="text-3xl" />,
   },
   {
     category: 'データベース',
-    items: ['PostgreSQL', 'Oracle'],
+    items: ['PostgreSQL', 'Oracle', 'SQL Server'],
     icon: <HiOutlineServer className="text-3xl" />,
   },
   {
