@@ -1,6 +1,4 @@
-import Link from 'next/link'
 import { PRODUCTS, PRODUCT_CATEGORIES } from '@/lib/constants/auto'
-import { HiOutlineArrowRight } from 'react-icons/hi'
 
 export default function ProductsSection() {
   return (
@@ -59,15 +57,6 @@ export default function ProductsSection() {
           ))}
         </div>
 
-        <div className="text-center mt-8">
-          <Link
-            href="/inquiry"
-            className="inline-flex items-center gap-2 text-auto-primary hover:underline font-medium"
-          >
-            カスタム開発のご相談はこちら
-            <HiOutlineArrowRight />
-          </Link>
-        </div>
       </div>
     </section>
   )

@@ -7,7 +7,6 @@ import {
   HiOutlineCloud,
   HiOutlineServer,
   HiOutlineSparkles,
-  HiOutlineCog,
   HiOutlineTable,
 } from 'react-icons/hi'
 import type { Skill, Experience, Service } from '@/types'
@@ -62,6 +61,19 @@ export const EXPERIENCES: Experience[] = [
 
 export const SERVICES: Service[] = [
   {
+    title: 'Excel・Windows自動化ツール',
+    description: 'Pythonで作成したexeファイルで、日々の繰り返し作業を自動化',
+    features: [
+      'Excel/CSVデータの自動処理',
+      'ファイル整理・リネーム自動化',
+      'Webデータ収集・スクレイピング',
+      'カスタムツール開発',
+    ],
+    icon: <HiOutlineTable className="text-4xl" />,
+    price: '¥30,000〜',
+    priceNote: '相談・見積無料、全額返金保証',
+  },
+  {
     title: 'ホームページ作成',
     description: '企業・個人向けのホームページを制作。デザインから公開まで一貫対応',
     features: [
@@ -88,32 +100,6 @@ export const SERVICES: Service[] = [
     priceNote: '規模・機能により変動',
   },
   {
-    title: 'Azure環境構築・移行支援',
-    description: 'Azureクラウドでのインフラ構築とシステム移行をサポート',
-    features: [
-      'Azure App Service環境構築',
-      'コンテナ化・Docker対応',
-      'CI/CDパイプライン整備',
-      'セキュリティ対策・監視設定',
-    ],
-    icon: <HiOutlineCloud className="text-4xl" />,
-    price: '¥200,000〜',
-    priceNote: '環境規模により変動',
-  },
-  {
-    title: '旧システムのリプレイス',
-    description: '古いシステムを最新技術で刷新し、使いやすく生まれ変わらせます',
-    features: [
-      '既存システムの分析・評価',
-      '最適な技術スタック提案',
-      '段階的な移行計画策定',
-      '運用・保守性の向上',
-    ],
-    icon: <HiOutlineCog className="text-4xl" />,
-    price: '¥300,000〜',
-    priceNote: '要件定義後にお見積り',
-  },
-  {
     title: 'AIツールを活用した開発効率化支援',
     description: 'Claude Code、Cursorなどを活用した開発プロセスの改善',
     features: [
@@ -125,19 +111,6 @@ export const SERVICES: Service[] = [
     icon: <HiOutlineSparkles className="text-4xl" />,
     price: '¥100,000〜',
     priceNote: '導入支援・研修含む',
-  },
-  {
-    title: 'Excel/Access業務効率化',
-    description: '日々の手作業をVBAマクロやAccessで自動化し、業務時間を削減',
-    features: [
-      'Excel VBAによる作業自動化',
-      'Accessデータベース構築',
-      'Word文書の自動生成',
-      '既存ファイルの改修・機能追加',
-    ],
-    icon: <HiOutlineTable className="text-4xl" />,
-    price: '¥30,000〜',
-    priceNote: '小規模案件も対応可',
   },
 ]
 
