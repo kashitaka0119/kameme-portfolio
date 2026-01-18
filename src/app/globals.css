@@ -10,6 +10,10 @@
   --border: #e2e8f0;
   --card: #f8fafc;
 
+  /* Auto Site Colors (Orange) */
+  --auto-primary: #f97316;
+  --auto-accent: #fb923c;
+
   /* Spacing */
   --section-padding: 6rem;
   --container-max-width: 1200px;
@@ -28,6 +32,10 @@
     --accent: #38bdf8;
     --border: #1e293b;
     --card: #1e1e1e;
+
+    /* Auto Site Colors (Orange) - Dark Mode */
+    --auto-primary: #fb923c;
+    --auto-accent: #fdba74;
   }
 }
 

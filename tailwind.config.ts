@@ -16,6 +16,8 @@ export default {
         accent: "var(--accent)",
         border: "var(--border)",
         card: "var(--card)",
+        "auto-primary": "var(--auto-primary)",
+        "auto-accent": "var(--auto-accent)",
       },
       fontFamily: {
         sans: ['var(--font-noto-sans-jp)', 'sans-serif'],

@@ -6,7 +6,7 @@ import ExperienceSection from '@/components/sections/ExperienceSection'
 import ServicesSection from '@/components/sections/ServicesSection'
 import ContactSection from '@/components/sections/ContactSection'
 
-export default function Home() {
+export default function PortfolioHome() {
   return (
     <>
       <a

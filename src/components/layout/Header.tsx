@@ -66,6 +66,14 @@ export default function Header() {
                   </button>
                 </li>
               ))}
+              <li>
+                <a
+                  href={process.env.NEXT_PUBLIC_AUTO_URL || '/?subdomain=auto'}
+                  className="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+                >
+                  自動化ツール販売
+                </a>
+              </li>
             </ul>
           </nav>
 
@@ -107,6 +115,14 @@ export default function Header() {
                   </button>
                 </li>
               ))}
+              <li>
+                <a
+                  href={process.env.NEXT_PUBLIC_AUTO_URL || '/?subdomain=auto'}
+                  className="block w-full text-left px-4 py-3 text-orange-500 hover:bg-card font-medium"
+                >
+                  自動化ツール販売
+                </a>
+              </li>
             </ul>
           </nav>
         </>

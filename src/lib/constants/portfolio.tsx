@@ -1,9 +1,6 @@
 import {
   SiPython,
-  SiDjango,
-  SiNextdotjs,
   SiReact,
-  SiTypescript,
 } from 'react-icons/si'
 import {
   HiOutlineCode,
