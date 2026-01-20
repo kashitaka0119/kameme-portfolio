@@ -20,20 +20,15 @@ export default function AutoFooter() {
             <Link href="/" className="hover:text-auto-primary transition-colors">
               ホーム
             </Link>
-            <Link href="/products" className="hover:text-auto-primary transition-colors">
-              製品一覧
+            <Link href="/#services" className="hover:text-auto-primary transition-colors">
+              サービス内容
             </Link>
-            <Link href="/inquiry" className="hover:text-auto-primary transition-colors">
+            <Link href="/#contact" className="hover:text-auto-primary transition-colors">
               お問い合わせ
             </Link>
-            <a
-              href="https://kameme.jp"
-              className="hover:text-auto-primary transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/profile" className="hover:text-auto-primary transition-colors">
               運営者情報
-            </a>
+            </Link>
           </div>
         </div>
 

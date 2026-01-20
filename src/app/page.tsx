@@ -1,7 +1,13 @@
 import type { Metadata } from 'next'
+import Header from '@/components/auto/layout/Header'
+import Footer from '@/components/auto/layout/Footer'
+import HeroSection from '@/components/auto/sections/HeroSection'
+import GuaranteeSection from '@/components/auto/sections/GuaranteeSection'
+import ProductsSection from '@/components/auto/sections/ProductsSection'
+import ContactSection from '@/components/auto/sections/ContactSection'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_AUTO_URL || 'https://auto.kameme.jp'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://kameme.jp'),
   title: {
     default: 'Windows自動化ツール販売 | かめめオート',
     template: '%s | かめめオート'
@@ -44,11 +50,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function AutoLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function Home() {
   return (
     <>
       <script
@@ -58,14 +60,20 @@ export default function AutoLayout({
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'かめめオート',
-            url: 'https://auto.kameme.jp',
-            logo: 'https://auto.kameme.jp/images/kameme.png',
+            url: 'https://kameme.jp',
+            logo: 'https://kameme.jp/images/kameme.png',
             description: '業務効率化のためのWindows自動化ツールを販売',
-            sameAs: ['https://kameme.jp'],
           }),
         }}
       />
-      <div className="auto-site">{children}</div>
+      <Header />
+      <main>
+        <HeroSection />
+        <ProductsSection />
+        <GuaranteeSection />
+        <ContactSection />
+      </main>
+      <Footer />
     </>
   )
 }

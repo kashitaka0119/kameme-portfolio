@@ -35,14 +35,14 @@ export default function AutoHeader() {
                 {item.label}
               </Link>
             ))}
-            <a
-              href={process.env.NEXT_PUBLIC_SITE_URL || '/'}
+            <Link
+              href="/profile"
               className="text-foreground hover:text-auto-primary transition-colors"
             >
               プロフィール
-            </a>
+            </Link>
             <Link
-              href="/inquiry"
+              href="/#contact"
               className="bg-auto-primary text-white px-4 py-2 rounded-lg hover:bg-auto-primary/90 transition-colors"
             >
               無料相談
@@ -77,15 +77,15 @@ export default function AutoHeader() {
                   {item.label}
                 </Link>
               ))}
-              <a
-                href={process.env.NEXT_PUBLIC_SITE_URL || '/'}
+              <Link
+                href="/profile"
                 className="text-foreground hover:text-auto-primary transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 プロフィール
-              </a>
+              </Link>
               <Link
-                href="/inquiry"
+                href="/#contact"
                 className="bg-auto-primary text-white px-4 py-3 rounded-lg hover:bg-auto-primary/90 transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >

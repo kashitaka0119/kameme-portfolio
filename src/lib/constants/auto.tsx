@@ -11,8 +11,8 @@ import type { Product, Guarantee, AutoNavItem } from '@/types/auto'
 
 export const AUTO_NAV_ITEMS: AutoNavItem[] = [
   { label: 'ホーム', href: '/' },
-  { label: '製品一覧', href: '/products' },
-  { label: '相談・見積', href: '/inquiry' },
+  { label: 'サービス内容', href: '/#services' },
+  { label: 'お問い合わせ', href: '/#contact' },
 ]
 
 export const PRODUCTS: Product[] = [
@@ -21,49 +21,49 @@ export const PRODUCTS: Product[] = [
     slug: 'excel-data-processor',
     name: 'Excel自動データ処理ツール',
     description: '複数のExcelファイルからデータを自動抽出・集計',
-    price: null,
+    price: 30000,
     features: [
       '複数ファイル一括処理',
       '自動集計レポート生成',
       'スケジュール実行対応',
     ],
     category: 'excel',
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     id: 'file-auto-1',
     slug: 'file-organizer',
     name: 'ファイル自動整理ツール',
     description: '指定ルールでファイルを自動分類・リネーム',
-    price: null,
+    price: 30000,
     features: [
       'ルールベース自動分類',
       '日付・連番リネーム',
       'フォルダ監視モード',
     ],
     category: 'file',
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     id: 'web-auto-1',
     slug: 'web-data-collector',
     name: 'Webデータ収集ツール',
     description: 'Webサイトからデータを自動収集・Excel出力',
-    price: null,
+    price: 50000,
     features: [
       '複数サイト対応',
       '定期実行機能',
       'Excel/CSV出力',
     ],
     category: 'web',
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     id: 'custom-1',
     slug: 'custom-development',
     name: 'カスタム開発',
     description: 'お客様の業務に合わせたオーダーメイドツール',
-    price: null,
+    price: 50000,
     features: [
       '要件ヒアリング',
       '専用ツール開発',

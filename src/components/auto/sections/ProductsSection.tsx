@@ -2,12 +2,12 @@ import { PRODUCTS, PRODUCT_CATEGORIES } from '@/lib/constants/auto'
 
 export default function ProductsSection() {
   return (
-    <section className="py-16">
+    <section id="services" className="py-16">
       <div className="max-w-[var(--container-max-width)] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">製品ラインナップ</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">サービス内容</h2>
           <p className="text-secondary">
-            様々な業務に対応した自動化ツールを準備中です
+            様々な業務に対応した自動化ツールをご用意しています
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function ProductsSection() {
               </ul>
               {product.price !== null ? (
                 <p className="text-xl font-bold text-auto-primary">
-                  ¥{product.price.toLocaleString()}
+                  ¥{product.price.toLocaleString()}<span className="text-sm font-normal">〜</span>
                 </p>
               ) : (
                 <p className="text-sm text-secondary">価格: お問い合わせ</p>

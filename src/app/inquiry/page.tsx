@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import AutoHeader from '@/components/auto/layout/Header'
-import AutoFooter from '@/components/auto/layout/Footer'
+import Header from '@/components/auto/layout/Header'
+import Footer from '@/components/auto/layout/Footer'
 import InquiryForm from '@/components/auto/ui/InquiryForm'
 import { GUARANTEES } from '@/lib/constants/auto'
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function InquiryPage() {
   return (
     <>
-      <AutoHeader />
+      <Header />
       <main>
         <section className="py-16">
           <div className="max-w-[var(--container-max-width)] mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +44,7 @@ export default function InquiryPage() {
           </div>
         </section>
       </main>
-      <AutoFooter />
+      <Footer />
     </>
   )
 }

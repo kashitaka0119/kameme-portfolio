@@ -13,9 +13,13 @@ export function validateEmail(email: string): boolean {
 export function smoothScrollTo(elementId: string) {
   const element = document.getElementById(elementId)
   if (element) {
-    element.scrollIntoView({
+    const headerHeight = 64 // ヘッダーの高さ (h-16 = 4rem = 64px)
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY
+    const offsetPosition = elementPosition - headerHeight
+
+    window.scrollTo({
+      top: offsetPosition,
       behavior: 'smooth',
-      block: 'start',
     })
   }
 }

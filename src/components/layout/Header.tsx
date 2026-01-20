@@ -68,7 +68,7 @@ export default function Header() {
               ))}
               <li>
                 <a
-                  href={process.env.NEXT_PUBLIC_AUTO_URL || '/?subdomain=auto'}
+                  href="/"
                   className="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium"
                 >
                   自動化ツール販売
@@ -117,7 +117,7 @@ export default function Header() {
               ))}
               <li>
                 <a
-                  href={process.env.NEXT_PUBLIC_AUTO_URL || '/?subdomain=auto'}
+                  href="/"
                   className="block w-full text-left px-4 py-3 text-orange-500 hover:bg-card font-medium"
                 >
                   自動化ツール販売
