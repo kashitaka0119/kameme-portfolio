@@ -23,17 +23,11 @@ export default function AutoHeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
               <Link
-                href="/inquiry"
-                className="inline-flex items-center justify-center gap-2 bg-auto-primary text-white px-6 py-3 rounded-lg hover:bg-auto-primary/90 transition-colors font-medium"
+                href="/#contact"
+                className="inline-flex items-center justify-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium"
               >
                 <HiOutlineChat className="text-xl" />
                 無料で相談する
-              </Link>
-              <Link
-                href="/products"
-                className="inline-flex items-center justify-center gap-2 border border-auto-primary text-auto-primary px-6 py-3 rounded-lg hover:bg-auto-primary/10 transition-colors font-medium"
-              >
-                製品を見る
               </Link>
             </div>
 
