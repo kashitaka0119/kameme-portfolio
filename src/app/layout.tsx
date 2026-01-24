@@ -1,4 +1,5 @@
 import localFont from 'next/font/local'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css"
 
 const notoSansJP = localFont({
@@ -31,7 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={notoSansJP.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <GoogleAnalytics gaId="G-8HX49N7CGG" />
+      </body>
     </html>
   )
 }
