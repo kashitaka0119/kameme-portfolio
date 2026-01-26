@@ -22,7 +22,7 @@ export const PORTFOLIO_WORKS: PortfolioWork[] = [
   {
     id: 'shorts-1',
     title: 'AI・ツール紹介',
-    description: 'らくらく勤怠集計',
+    description: 'Excel自動化ツール',
     thumbnail: 'https://img.youtube.com/vi/P5eRCrBlXSQ/maxresdefault.jpg',
     youtubeUrl: 'https://www.youtube.com/shorts/P5eRCrBlXSQ',
   },
