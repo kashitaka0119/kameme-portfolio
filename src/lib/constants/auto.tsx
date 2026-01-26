@@ -8,11 +8,23 @@ import {
   HiOutlineCog,
 } from 'react-icons/hi'
 import type { Product, Guarantee, AutoNavItem } from '@/types/auto'
+import type { PortfolioWork } from '@/types'
 
 export const AUTO_NAV_ITEMS: AutoNavItem[] = [
   { label: 'ホーム', href: '/' },
+  { label: '制作実績', href: '/#portfolio' },
   { label: 'サービス内容', href: '/#services' },
   { label: 'お問い合わせ', href: '/#contact' },
+]
+
+export const PORTFOLIO_WORKS: PortfolioWork[] = [
+  {
+    id: 'shorts-1',
+    title: 'AI・ツール紹介',
+    description: 'らくらく勤怠集計',
+    thumbnail: 'https://img.youtube.com/vi/P5eRCrBlXSQ/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/shorts/P5eRCrBlXSQ',
+  },
 ]
 
 export const PRODUCTS: Product[] = [

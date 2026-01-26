@@ -23,3 +23,15 @@ export interface ContactFormData {
   email: string;
   message: string;
 }
+
+export interface PortfolioWork {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  youtubeUrl: string;
+  otherLinks?: {
+    platform: 'x' | 'tiktok' | 'instagram';
+    url: string;
+  }[];
+}
