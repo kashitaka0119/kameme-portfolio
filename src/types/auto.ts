@@ -29,3 +29,8 @@ export interface InquiryFormData {
   inquiryType: 'consultation' | 'quote' | 'custom'
   message: string
 }
+
+export interface FAQ {
+  question: string
+  answer: string
+}

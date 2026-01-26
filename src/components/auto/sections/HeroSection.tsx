@@ -18,7 +18,7 @@ export default function AutoHeroSection() {
               <br />
               Excel処理、ファイル整理、Web作業など、
               <br />
-              あなたの業務をexeツールでサポートします。
+              あなただけのオリジナル自動化ツールを開発します。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">

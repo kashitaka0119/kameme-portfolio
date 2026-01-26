@@ -5,6 +5,7 @@ import HeroSection from '@/components/auto/sections/HeroSection'
 import PortfolioSection from '@/components/auto/sections/PortfolioSection'
 import GuaranteeSection from '@/components/auto/sections/GuaranteeSection'
 import ProductsSection from '@/components/auto/sections/ProductsSection'
+import FAQSection from '@/components/auto/sections/FAQSection'
 import ContactSection from '@/components/auto/sections/ContactSection'
 
 export const metadata: Metadata = {
@@ -73,6 +74,7 @@ export default function Home() {
         <PortfolioSection />
         <ProductsSection />
         <GuaranteeSection />
+        <FAQSection />
         <ContactSection />
       </main>
       <Footer />

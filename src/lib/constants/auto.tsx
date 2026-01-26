@@ -7,13 +7,14 @@ import {
   HiOutlineGlobe,
   HiOutlineCog,
 } from 'react-icons/hi'
-import type { Product, Guarantee, AutoNavItem } from '@/types/auto'
+import type { Product, Guarantee, AutoNavItem, FAQ } from '@/types/auto'
 import type { PortfolioWork } from '@/types'
 
 export const AUTO_NAV_ITEMS: AutoNavItem[] = [
   { label: 'ホーム', href: '/' },
   { label: '制作実績', href: '/#portfolio' },
   { label: 'サービス内容', href: '/#services' },
+  { label: 'よくある質問', href: '/#faq' },
   { label: 'お問い合わせ', href: '/#contact' },
 ]
 
@@ -124,5 +125,40 @@ export const PRODUCT_CATEGORIES = [
     id: 'custom',
     name: 'カスタム開発',
     icon: <HiOutlineCog className="text-3xl" />,
+  },
+]
+
+export const FAQS: FAQ[] = [
+  {
+    question: '納品までの流れは？',
+    answer: 'お問い合わせ → ヒアリング → お見積り → 開発 → 納品の流れです。ヒアリングからお見積りまでは無料で対応いたします。開発期間は内容により異なりますが、シンプルなツールであれば1〜2週間程度です。',
+  },
+  {
+    question: '支払い方法は？',
+    answer: '銀行振込で全額前払いとなります。サービスにご不満がありましたら、理由を問わず全額返金いたします。',
+  },
+  {
+    question: '全額返金保証とは？',
+    answer: '納品前であれば、理由を問わずキャンセルできます。キャンセルの場合、料金の全額を14日以内に返金いたします。',
+  },
+  {
+    question: '業務内容が変わった場合、修正してもらえますか？',
+    answer: '納品後30日以内の軽微な修正は無料です。それ以降や大きな変更は有償にて対応いたします。お気軽にご相談ください。',
+  },
+  {
+    question: '対応しているWindowsバージョンは？',
+    answer: 'Windows 11に対応しています。',
+  },
+  {
+    question: 'カスタマイズは可能ですか？',
+    answer: 'はい、完全オーダーメイドであなただけのオリジナル自動化ツールを開発します。',
+  },
+  {
+    question: 'サポート期間はどのくらいですか？',
+    answer: '納品後30日間は無料で操作方法のご質問や、軽微な修正に対応いたします。',
+  },
+  {
+    question: '複数のPCで使用できますか？',
+    answer: '基本的に1ライセンス1PCとなりますが、複数PC利用のご相談も承っております。お気軽にお問い合わせください。',
   },
 ]
