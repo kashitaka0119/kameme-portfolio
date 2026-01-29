@@ -26,6 +26,13 @@ export const PORTFOLIO_WORKS: PortfolioWork[] = [
     thumbnail: 'https://img.youtube.com/vi/P5eRCrBlXSQ/maxresdefault.jpg',
     youtubeUrl: 'https://www.youtube.com/shorts/P5eRCrBlXSQ',
   },
+  {
+    id: 'shorts-2',
+    title: 'AI・ツール紹介',
+    description: 'Webデータ収集ツール',
+    thumbnail: 'https://img.youtube.com/vi/R5iMquopdO0/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/shorts/R5iMquopdO0',
+  },
 ]
 
 export const PRODUCTS: Product[] = [
