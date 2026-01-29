@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 
 interface FormData {
@@ -10,6 +11,7 @@ interface FormData {
 }
 
 export default function ContactSection() {
+  const router = useRouter()
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -40,8 +42,7 @@ export default function ContactSection() {
       })
 
       if (response.ok) {
-        setSubmitStatus('success')
-        setFormData({ name: '', email: '', message: '' })
+        router.push('/thanks')
       } else {
         setSubmitStatus('error')
       }

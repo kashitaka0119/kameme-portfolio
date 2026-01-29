@@ -1,11 +1,13 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { validateEmail } from '@/lib/utils'
 import Button from './Button'
 import type { ContactFormData } from '@/types'
 
 export default function ContactForm() {
+  const router = useRouter()
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
@@ -54,9 +56,7 @@ export default function ContactForm() {
       })
 
       if (response.ok) {
-        setSubmitStatus('success')
-        setFormData({ name: '', email: '', message: '' })
-        setErrors({})
+        router.push('/thanks')
       } else {
         setSubmitStatus('error')
       }
