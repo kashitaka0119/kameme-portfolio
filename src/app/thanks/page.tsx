@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Script from 'next/script'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -9,7 +10,15 @@ export const metadata: Metadata = {
 
 export default function ThanksPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center px-4">
+    <>
+      <Script
+        id="google-ads-conversion"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `gtag('event', 'conversion_event_submit_lead_form', {});`,
+        }}
+      />
+      <main className="min-h-screen flex items-center justify-center px-4">
       <div className="text-center max-w-md">
         <div className="mb-6">
           <svg
@@ -42,5 +51,6 @@ export default function ThanksPage() {
         </Link>
       </div>
     </main>
+    </>
   )
 }
