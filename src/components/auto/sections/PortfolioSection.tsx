@@ -1,14 +1,38 @@
+'use client'
+
+import { useState } from 'react'
 import { PORTFOLIO_WORKS } from '@/lib/constants/auto'
-import { HiOutlinePlay } from 'react-icons/hi'
-import { SiYoutube, SiX, SiTiktok, SiInstagram } from 'react-icons/si'
+import { HiOutlinePlay, HiX } from 'react-icons/hi'
+import { SiYoutube, SiX as SiXIcon, SiTiktok, SiInstagram } from 'react-icons/si'
 
 const platformIcons = {
-  x: SiX,
+  x: SiXIcon,
   tiktok: SiTiktok,
   instagram: SiInstagram,
 }
 
+// YouTubeのURLからVideo IDを抽出
+function extractVideoId(url: string): string | null {
+  const shortsMatch = url.match(/youtube\.com\/shorts\/([^?&]+)/)
+  const watchMatch = url.match(/youtube\.com\/watch\?v=([^&]+)/)
+  const shortMatch = url.match(/youtu\.be\/([^?&]+)/)
+  return shortsMatch?.[1] || watchMatch?.[1] || shortMatch?.[1] || null
+}
+
 export default function PortfolioSection() {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
+
+  const openModal = (youtubeUrl: string) => {
+    const videoId = extractVideoId(youtubeUrl)
+    if (videoId) {
+      setSelectedVideo(videoId)
+    }
+  }
+
+  const closeModal = () => {
+    setSelectedVideo(null)
+  }
+
   return (
     <section id="portfolio" className="py-16 bg-gray-50 dark:bg-gray-900/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,12 +45,10 @@ export default function PortfolioSection() {
 
         <div className="flex flex-wrap justify-center gap-6">
           {PORTFOLIO_WORKS.map((work) => (
-            <a
+            <div
               key={work.id}
-              href={work.youtubeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow w-64"
+              onClick={() => openModal(work.youtubeUrl)}
+              className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow w-64 cursor-pointer"
             >
               {/* サムネイル */}
               <div className="relative overflow-hidden" style={{ aspectRatio: '9/16' }}>
@@ -56,7 +78,7 @@ export default function PortfolioSection() {
 
                 {/* 他のSNSリンク */}
                 {work.otherLinks && work.otherLinks.length > 0 && (
-                  <div className="flex gap-3 mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+                  <div className="flex justify-center gap-3 mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
                     {work.otherLinks.map((link) => {
                       const Icon = platformIcons[link.platform]
                       return (
@@ -75,10 +97,42 @@ export default function PortfolioSection() {
                   </div>
                 )}
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
+
+      {/* 動画再生モーダル */}
+      {selectedVideo && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+          onClick={closeModal}
+        >
+          {/* 閉じるボタン */}
+          <button
+            onClick={closeModal}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+            aria-label="閉じる"
+          >
+            <HiX className="text-4xl" />
+          </button>
+
+          {/* 動画コンテナ */}
+          <div
+            className="relative w-full max-w-sm mx-4"
+            style={{ aspectRatio: '9/16' }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <iframe
+              src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full rounded-xl"
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }
