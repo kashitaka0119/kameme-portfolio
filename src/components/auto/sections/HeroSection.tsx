@@ -9,16 +9,14 @@ export default function AutoHeroSection() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              <span className="text-auto-primary">Windows自動化ツール</span>で
+              毎月のExcel集計、
               <br />
-              業務を効率化
+              <span className="text-auto-primary">まだ手作業でやってますか？</span>
             </h1>
             <p className="text-lg text-secondary mb-6">
-              面倒な繰り返し作業を自動化。
+              100ファイルの処理を3秒で。
               <br />
-              Excel処理、ファイル整理、Web作業など、
-              <br />
-              あなただけのオリジナル自動化ツールを開発します。
+              あなた専用の自動化ツールを開発します。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
