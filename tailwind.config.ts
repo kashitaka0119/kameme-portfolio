@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 export default {
   content: [
@@ -28,7 +29,38 @@ export default {
       spacing: {
         section: 'var(--section-padding)',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: 'var(--foreground)',
+            a: {
+              color: 'var(--auto-primary)',
+              '&:hover': {
+                color: 'var(--auto-accent)',
+              },
+            },
+            h1: { color: 'var(--foreground)' },
+            h2: { color: 'var(--foreground)' },
+            h3: { color: 'var(--foreground)' },
+            h4: { color: 'var(--foreground)' },
+            strong: { color: 'var(--foreground)' },
+            code: {
+              color: 'var(--foreground)',
+              backgroundColor: 'var(--card)',
+              padding: '0.25rem 0.5rem',
+              borderRadius: '0.25rem',
+              fontWeight: '400',
+            },
+            'code::before': { content: '""' },
+            'code::after': { content: '""' },
+            blockquote: {
+              borderLeftColor: 'var(--auto-primary)',
+              color: 'var(--secondary)',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [typography],
 } satisfies Config;

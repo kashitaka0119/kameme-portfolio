@@ -35,3 +35,26 @@ export interface PortfolioWork {
     url: string;
   }[];
 }
+
+// ブログ関連の型定義
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  content: string; // HTMLに変換済みのコンテンツ
+  publishedAt: string; // ISO 8601形式
+  updatedAt?: string;
+  thumbnail?: string;
+  tags: string[];
+  author?: string;
+}
+
+export interface BlogPostMeta {
+  slug: string;
+  title: string;
+  description: string;
+  publishedAt: string;
+  updatedAt?: string;
+  thumbnail?: string;
+  tags: string[];
+}

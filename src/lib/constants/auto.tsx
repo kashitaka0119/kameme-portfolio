@@ -14,6 +14,7 @@ export const AUTO_NAV_ITEMS: AutoNavItem[] = [
   { label: 'ホーム', href: '/' },
   { label: '制作実績', href: '/#portfolio' },
   { label: 'サービス内容', href: '/#services' },
+  { label: 'ブログ', href: '/blog' },
   { label: 'よくある質問', href: '/#faq' },
   { label: 'お問い合わせ', href: '/#contact' },
 ]
