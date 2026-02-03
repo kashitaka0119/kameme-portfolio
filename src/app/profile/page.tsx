@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import ProfileHeader from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+import Link from 'next/link'
+import AutoHeader from '@/components/auto/layout/Header'
+import Footer from '@/components/auto/layout/Footer'
 import HeroSection from '@/components/sections/HeroSection'
 import SkillsSection from '@/components/sections/SkillsSection'
 import ExperienceSection from '@/components/sections/ExperienceSection'
@@ -47,13 +48,23 @@ export default function ProfilePage() {
       >
         メインコンテンツへスキップ
       </a>
-      <ProfileHeader />
+      <AutoHeader />
       <main id="main-content">
         <HeroSection />
         <SkillsSection />
         <ExperienceSection />
         <ServicesSection />
         <ContactSection />
+
+        {/* かめめオートに戻る */}
+        <div className="text-center py-16 bg-orange-50 dark:bg-gray-800">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-lg hover:bg-orange-600 transition-colors text-lg font-bold shadow-xl"
+          >
+            ← かめめオートに戻る
+          </Link>
+        </div>
       </main>
       <Footer />
     </>

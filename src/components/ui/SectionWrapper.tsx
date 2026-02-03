@@ -23,7 +23,7 @@ export default function SectionWrapper({
         className
       )}
     >
-      <div className="max-w-container mx-auto">
+      <div className="max-w-(--container-max-width) mx-auto">
         {(title || subtitle) && (
           <div className="text-center mb-16">
             {title && (

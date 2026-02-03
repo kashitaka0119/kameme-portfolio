@@ -92,6 +92,16 @@ export default async function BlogPage() {
               ))}
             </div>
           )}
+
+          {/* かめめオートに戻る */}
+          <div className="text-center pt-12 mt-8 border-t border-border pb-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors shadow-xl font-bold"
+            >
+              ← かめめオートに戻る
+            </Link>
+          </div>
         </div>
       </main>
       <Footer />

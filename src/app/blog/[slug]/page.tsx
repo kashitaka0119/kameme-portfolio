@@ -131,12 +131,20 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* 記事フッター */}
           <footer className="mt-12 pt-8 border-t border-border">
-            <Link
-              href="/blog"
-              className="inline-flex items-center text-auto-primary hover:underline"
-            >
-              ← 記事一覧に戻る
-            </Link>
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <Link
+                href="/blog"
+                className="inline-flex items-center text-auto-primary hover:underline"
+              >
+                ← 記事一覧に戻る
+              </Link>
+              <Link
+                href="/"
+                className="inline-flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors shadow-xl font-bold"
+              >
+                かめめオートに戻る
+              </Link>
+            </div>
           </footer>
         </article>
       </main>

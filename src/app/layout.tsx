@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Script from 'next/script'
 import { GoogleAnalytics } from '@next/third-parties/google'
@@ -29,13 +30,17 @@ const notoSansJP = localFont({
   fallback: ['Hiragino Sans', 'Yu Gothic', 'Meiryo', 'sans-serif'],
 })
 
+export const metadata: Metadata = {
+  metadataBase: new URL('https://kameme.work'),
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja" className={notoSansJP.variable}>
+    <html lang="ja" className={notoSansJP.variable} data-scroll-behavior="smooth">
       <body>
         {children}
         <GoogleAnalytics gaId={GA_ID} />

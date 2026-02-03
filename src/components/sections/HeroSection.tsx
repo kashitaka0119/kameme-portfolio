@@ -18,6 +18,7 @@ export default function HeroSection() {
               src="/images/kameme.png"
               alt="かめめのロゴ - 笑顔のカメのイラスト"
               fill
+              sizes="(max-width: 768px) 128px, 160px"
               className="object-contain"
               priority
             />
