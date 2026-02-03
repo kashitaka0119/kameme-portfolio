@@ -78,7 +78,10 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  const processedContent = await remark().use(remarkGfm).use(html).process(content);
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(html, { sanitize: false })
+    .process(content);
 
   return {
     slug,
@@ -90,6 +93,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     thumbnail: data.thumbnail,
     tags: data.tags || [],
     author: data.author,
+    youtubeVideo: data.youtubeVideo,
   };
 }
 

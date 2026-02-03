@@ -21,7 +21,9 @@
       "Bash(curl:*)",
       "Bash(npm run dev:*)",
       "Bash(fuser:*)",
-      "WebFetch(domain:www.youtube.com)"
+      "WebFetch(domain:www.youtube.com)",
+      "Bash(ffmpeg:*)",
+      "Bash(ffprobe:*)"
     ]
   }
 }

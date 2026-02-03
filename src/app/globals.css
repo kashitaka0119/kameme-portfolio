@@ -188,3 +188,19 @@ html {
 .prose a:hover {
   color: var(--auto-accent);
 }
+
+/* 画像 */
+.prose img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .prose img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+}

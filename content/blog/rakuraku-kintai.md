@@ -7,6 +7,7 @@ tags:
   - 自動化
   - 勤怠管理
 author: かめめ
+youtubeVideo: P5eRCrBlXSQ
 ---
 
 ## こんなお悩みありませんか？

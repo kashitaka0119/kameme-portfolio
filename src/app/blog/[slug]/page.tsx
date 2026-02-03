@@ -5,6 +5,7 @@ import { format, parseISO } from 'date-fns';
 import { ja } from 'date-fns/locale';
 import AutoHeader from '@/components/auto/layout/Header';
 import Footer from '@/components/auto/layout/Footer';
+import YouTubePlayer from '@/components/blog/YouTubePlayer';
 import { getPostBySlug, getAllPostSlugs } from '@/lib/blog';
 
 interface Props {
@@ -116,6 +117,11 @@ export default async function BlogPostPage({ params }: Props) {
               )}
             </div>
           </header>
+
+          {/* YouTube動画 */}
+          {post.youtubeVideo && (
+            <YouTubePlayer videoId={post.youtubeVideo} title={post.title} />
+          )}
 
           {/* 記事本文 - Tailwind Typographyを適用 */}
           <div

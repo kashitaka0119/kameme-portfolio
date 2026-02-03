@@ -47,6 +47,7 @@ export interface BlogPost {
   thumbnail?: string;
   tags: string[];
   author?: string;
+  youtubeVideo?: string; // YouTube動画ID
 }
 
 export interface BlogPostMeta {
