@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Header from '@/components/auto/layout/Header'
-import Footer from '@/components/auto/layout/Footer'
+import Footer from '@/components/layout/Footer'
 import InquiryForm from '@/components/auto/ui/InquiryForm'
 import { GUARANTEES } from '@/lib/constants/auto'
 

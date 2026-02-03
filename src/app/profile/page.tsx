@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import AutoHeader from '@/components/auto/layout/Header'
-import Footer from '@/components/auto/layout/Footer'
+import Footer from '@/components/layout/Footer'
 import HeroSection from '@/components/sections/HeroSection'
 import SkillsSection from '@/components/sections/SkillsSection'
 import ExperienceSection from '@/components/sections/ExperienceSection'

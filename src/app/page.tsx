@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Header from '@/components/auto/layout/Header'
-import Footer from '@/components/auto/layout/Footer'
+import Footer from '@/components/layout/Footer'
 import HeroSection from '@/components/auto/sections/HeroSection'
 import PortfolioSection from '@/components/auto/sections/PortfolioSection'
 import GuaranteeSection from '@/components/auto/sections/GuaranteeSection'

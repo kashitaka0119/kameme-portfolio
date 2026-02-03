@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { format, parseISO } from 'date-fns';
 import { ja } from 'date-fns/locale';
 import AutoHeader from '@/components/auto/layout/Header';
-import Footer from '@/components/auto/layout/Footer';
+import Footer from '@/components/layout/Footer'
 import YouTubePlayer from '@/components/blog/YouTubePlayer';
 import { getPostBySlug, getAllPostSlugs } from '@/lib/blog';
 
