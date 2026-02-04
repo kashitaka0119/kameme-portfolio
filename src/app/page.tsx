@@ -8,6 +8,7 @@ import ProductsSection from '@/components/auto/sections/ProductsSection'
 import BlogSection from '@/components/auto/sections/BlogSection'
 import FAQSection from '@/components/auto/sections/FAQSection'
 import ContactSection from '@/components/auto/sections/ContactSection'
+import CampaignBanner from '@/components/auto/sections/CampaignBanner'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://kameme.jp'),
@@ -72,6 +73,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <CampaignBanner />
         <PortfolioSection />
         <ProductsSection />
         <GuaranteeSection />

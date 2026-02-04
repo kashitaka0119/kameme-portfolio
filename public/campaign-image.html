@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャンペーン告知画像</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      width: 1200px;
+      height: 630px;
+      background: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #fbbf24 100%);
+      border-radius: 0;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    /* 装飾用の円 */
+    .decoration-circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .circle-1 {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      right: -50px;
+    }
+
+    .circle-2 {
+      width: 200px;
+      height: 200px;
+      bottom: -50px;
+      left: -50px;
+    }
+
+    .circle-3 {
+      width: 150px;
+      height: 150px;
+      top: 50%;
+      left: 10%;
+      opacity: 0.5;
+    }
+
+    /* キャンペーンラベル */
+    .label {
+      background: #dc2626;
+      color: white;
+      padding: 8px 24px;
+      font-size: 24px;
+      font-weight: 700;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* メインタイトル */
+    .title {
+      color: white;
+      font-size: 48px;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      line-height: 1.3;
+    }
+
+    /* 価格セクション */
+    .price-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .original-price {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 28px;
+      text-decoration: line-through;
+    }
+
+    .arrow {
+      color: white;
+      font-size: 32px;
+    }
+
+    .campaign-price {
+      background: white;
+      color: #ea580c;
+      padding: 16px 32px;
+      border-radius: 16px;
+      font-size: 56px;
+      font-weight: 900;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .yen {
+      font-size: 36px;
+    }
+
+    /* 限定情報 */
+    .limited {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .limited-item {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 22px;
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+    }
+
+    /* 期限 */
+    .deadline {
+      color: white;
+      font-size: 28px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .deadline-date {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 8px 20px;
+      border-radius: 8px;
+    }
+
+    /* ロゴ */
+    .logo {
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: white;
+      padding: 4px;
+    }
+
+    /* 吹き出し */
+    .badge {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      background: #fef08a;
+      color: #92400e;
+      padding: 12px 20px;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 8px;
+      transform: rotate(-5deg);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- 装飾 -->
+    <div class="decoration-circle circle-1"></div>
+    <div class="decoration-circle circle-2"></div>
+    <div class="decoration-circle circle-3"></div>
+
+    <!-- 吹き出し -->
+    <div class="badge">Excel作業を自動化！</div>
+
+    <!-- キャンペーンラベル -->
+    <div class="label">期間限定キャンペーン</div>
+
+    <!-- メインタイトル -->
+    <h1 class="title">Excel自動化ツール<br>オーダーメイド開発</h1>
+
+    <!-- 価格 -->
+    <div class="price-section">
+      <span class="original-price">通常 30,000円〜</span>
+      <span class="arrow">→</span>
+      <div class="campaign-price">
+        <span class="yen">¥</span>9,800
+      </div>
+    </div>
+
+    <!-- 限定情報 -->
+    <div class="limited">
+      <div class="limited-item">先着1名様限定</div>
+      <div class="limited-item">全額返金保証付き</div>
+    </div>
+
+    <!-- 期限 -->
+    <div class="deadline">
+      <span>📅</span>
+      <span class="deadline-date">2026年2月13日まで</span>
+    </div>
+
+    <!-- ロゴ -->
+    <div class="logo">
+      <img src="/images/kameme.png" alt="かめめ">
+      <span>かめめオート</span>
+    </div>
+  </div>
+</body>
+</html>
