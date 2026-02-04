@@ -21,6 +21,13 @@ export const AUTO_NAV_ITEMS: AutoNavItem[] = [
 
 export const PORTFOLIO_WORKS: PortfolioWork[] = [
   {
+    id: 'shorts-0',
+    title: 'AI・ツール紹介',
+    description: 'Webデータ収集ツール',
+    thumbnail: 'https://img.youtube.com/vi/3WXjrX59aMg/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/shorts/3WXjrX59aMg',
+  },
+  {
     id: 'shorts-1',
     title: 'AI・ツール紹介',
     description: 'Excel自動化ツール',
