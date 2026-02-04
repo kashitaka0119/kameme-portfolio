@@ -35,7 +35,7 @@ export default function Footer() {
               お問い合わせ
             </Link>
             <Link href="/profile" className="hover:text-auto-primary transition-colors">
-              運営者情報
+              プロフィール
             </Link>
           </div>
         </div>

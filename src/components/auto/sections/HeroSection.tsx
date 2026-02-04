@@ -9,14 +9,14 @@ export default function AutoHeroSection() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              毎月のExcel集計、
+              毎月8時間のExcel作業を、
               <br />
-              <span className="text-auto-primary">まだ手作業でやってますか？</span>
+              <span className="text-auto-primary">5分に。</span>
             </h1>
             <p className="text-lg text-secondary mb-6">
-              100ファイルの処理を3秒で。
+              マクロ不要。あなた専用の自動化ツールをオーダーメイド。
               <br />
-              あなた専用の自動化ツールを開発します。
+              相談無料・30日間返金保証
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
