@@ -106,4 +106,4 @@ exeファイルをダブルクリックするだけで起動します。イン�
 
 **まずは無料でご相談ください。** お見積りまで費用は一切かかりません。
 
-[お問い合わせはこちら](/#contact)
+<a href="/#contact" style="display: inline-block; background-color: #f97316; color: white !important; padding: 12px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">お問い合わせはこちら</a>
