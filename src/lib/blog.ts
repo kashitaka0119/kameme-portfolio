@@ -21,15 +21,17 @@ function toISODateString(date: Date | string | undefined): string {
 
 /**
  * 全記事のメタデータを取得（一覧表示用）
- * 公開日の降順でソート
+ * 公開日の降順でソート、未来の記事は除外
  */
-export async function getAllPosts(): Promise<BlogPostMeta[]> {
+export async function getAllPosts(includeScheduled = false): Promise<BlogPostMeta[]> {
   // ディレクトリが存在しない場合は空配列を返す
   if (!fs.existsSync(POSTS_DIRECTORY)) {
     return [];
   }
 
   const fileNames = fs.readdirSync(POSTS_DIRECTORY);
+  const today = new Date();
+  today.setHours(23, 59, 59, 999); // 今日中の記事は表示
 
   const posts = fileNames
     .filter((name) => name.endsWith('.md'))
@@ -48,6 +50,12 @@ export async function getAllPosts(): Promise<BlogPostMeta[]> {
         thumbnail: data.thumbnail,
         tags: data.tags || [],
       } as BlogPostMeta;
+    })
+    .filter((post) => {
+      // includeScheduled=true の場合は全記事を含む（管理用）
+      if (includeScheduled) return true;
+      // 公開日が今日以前の記事のみ表示
+      return new Date(post.publishedAt) <= today;
     });
 
   // 公開日で降順ソート
@@ -67,8 +75,9 @@ export async function getLatestPosts(count: number): Promise<BlogPostMeta[]> {
 
 /**
  * slug から個別記事を取得
+ * allowScheduled=true でプレビュー可能（デフォルトは未来記事を非表示）
  */
-export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+export async function getPostBySlug(slug: string, allowScheduled = false): Promise<BlogPost | null> {
   const fullPath = path.join(POSTS_DIRECTORY, `${slug}.md`);
 
   if (!fs.existsSync(fullPath)) {
@@ -77,6 +86,16 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
+
+  // 未来の記事は非表示（SEO対策）
+  if (!allowScheduled) {
+    const today = new Date();
+    today.setHours(23, 59, 59, 999);
+    const publishedAt = new Date(toISODateString(data.publishedAt));
+    if (publishedAt > today) {
+      return null; // 404として扱われる
+    }
+  }
 
   const processedContent = await remark()
     .use(remarkGfm)
