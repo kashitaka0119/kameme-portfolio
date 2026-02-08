@@ -26,7 +26,7 @@ export default function CampaignBanner() {
         {/* メインコピー */}
         <p className="text-white text-lg md:text-xl font-bold mb-2">
           先着1名様 Excel自動化ツール{' '}
-          <span className="text-3xl md:text-4xl text-yellow-200">9,800円</span>
+          <span className="text-3xl md:text-4xl text-yellow-200">5,000円</span>
         </p>
 
         {/* 通常価格 */}
