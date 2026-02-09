@@ -30,7 +30,7 @@ export const PORTFOLIO_WORKS: PortfolioWork[] = [
   {
     id: 'shorts-0',
     title: 'AI・ツール紹介',
-    description: 'Webデータ収集ツール',
+    description: 'PDF請求書作成ツール',
     thumbnail: 'https://img.youtube.com/vi/3WXjrX59aMg/maxresdefault.jpg',
     youtubeUrl: 'https://www.youtube.com/shorts/3WXjrX59aMg',
   },
