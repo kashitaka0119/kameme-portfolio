@@ -145,4 +145,4 @@ author: かめめ
 
 まずは、あなたの時間の使い方を見直してみませんか？
 
-<a href="/#contact" style="display: inline-block; background-color: #f97316; color: white !important; padding: 12px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">働き方を変える相談をする</a>
+<a href="/#contact" style="display: inline-block; background-color: #f97316; color: white !important; padding: 12px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">仕事の効率化の相談をする</a>
