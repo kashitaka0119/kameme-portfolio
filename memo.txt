@@ -4,3 +4,5 @@ git config --global user.name "kameme"
 ■デプロイ
 vercel login
 vercel --prod --yes
+
+ブログ更新
