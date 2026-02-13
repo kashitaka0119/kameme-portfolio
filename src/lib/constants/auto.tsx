@@ -37,9 +37,9 @@ export const PORTFOLIO_WORKS: PortfolioWork[] = [
   {
     id: 'shorts-2',
     title: 'AI・ツール紹介',
-    description: 'Webデータ収集ツール',
-    thumbnail: 'https://img.youtube.com/vi/R5iMquopdO0/maxresdefault.jpg',
-    youtubeUrl: 'https://www.youtube.com/shorts/R5iMquopdO0',
+    description: 'インターネット自動入力ツール',
+    thumbnail: 'https://img.youtube.com/vi/F74evUgaykQ/maxresdefault.jpg',
+    youtubeUrl: 'https://www.youtube.com/shorts/F74evUgaykQ',
   },
 ]
 
