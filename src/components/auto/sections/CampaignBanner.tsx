@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function CampaignBanner() {
   // キャンペーン終了日
-  const campaignEndDate = new Date('2026-02-13T23:59:59')
+  const campaignEndDate = new Date('2026-02-22T23:59:59')
   const now = new Date()
 
   // キャンペーン終了後は表示しない
@@ -37,7 +37,7 @@ export default function CampaignBanner() {
         {/* 期限 */}
         <p className="text-white flex items-center justify-center gap-2 mb-4">
           <span className="text-xl">📅</span>
-          <span className="font-medium">2026年2月13日まで</span>
+          <span className="font-medium">2026年2月22日まで</span>
         </p>
 
         {/* CTAボタン */}
