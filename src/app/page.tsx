@@ -5,7 +5,6 @@ import HeroSection from '@/components/auto/sections/HeroSection'
 import PortfolioSection from '@/components/auto/sections/PortfolioSection'
 import GuaranteeSection from '@/components/auto/sections/GuaranteeSection'
 import ProductsSection from '@/components/auto/sections/ProductsSection'
-import AiDevSection from '@/components/auto/sections/AiDevSection'
 import BlogSection from '@/components/auto/sections/BlogSection'
 import FAQSection from '@/components/auto/sections/FAQSection'
 import ContactSection from '@/components/auto/sections/ContactSection'
@@ -76,7 +75,6 @@ export default function Home() {
         <HeroSection />
         <CampaignBanner />
         <PortfolioSection />
-        <AiDevSection />
         <ProductsSection />
         <GuaranteeSection />
         <BlogSection />
