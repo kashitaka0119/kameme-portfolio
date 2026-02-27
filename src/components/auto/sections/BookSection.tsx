@@ -12,13 +12,23 @@ export default function BookSection() {
     <section className="bg-gradient-to-r from-blue-600 to-indigo-700 py-10 px-4">
       <div className="max-w-[var(--container-max-width)] mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* YouTube Shorts 埋め込み */}
-          <div className="flex-shrink-0">
+          {/* YouTube動画 埋め込み */}
+          <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
             <iframe
               width="270"
               height="480"
               src="https://www.youtube.com/embed/HbZz7pSd6-w"
-              title="【Claude Code】Kindle本紹介"
+              title="【Claude Code】Kindle本紹介 ショート"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-xl shadow-2xl"
+            />
+            <iframe
+              width="270"
+              height="480"
+              src="https://www.youtube.com/embed/8j0-Qnh36bU"
+              title="【Claude Code】Kindle本紹介 長尺"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
