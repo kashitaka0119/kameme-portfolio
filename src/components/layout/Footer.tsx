@@ -17,10 +17,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col items-center md:items-start gap-2">
             <Link href="/" className="font-bold text-lg text-auto-primary">
-              かめめオート
+              かめめ
             </Link>
             <p className="text-sm text-secondary">
-              Windows自動化ツール販売
+              Claude Code｜AIプログラミング｜かめめ
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-4 text-center text-sm text-secondary">
-          <p>&copy; {currentYear} かめめオート. All rights reserved.</p>
+          <p>&copy; {currentYear} かめめ. All rights reserved.</p>
         </div>
       </div>
     </footer>

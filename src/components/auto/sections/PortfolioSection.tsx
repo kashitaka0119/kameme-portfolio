@@ -39,7 +39,7 @@ export default function PortfolioSection() {
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">制作実績</h2>
           <p className="text-gray-600 dark:text-gray-400">
-            YouTubeショート動画を配信しています
+            Claude Code・AIプログラミングの動画を配信しています
           </p>
           <a
             href="https://www.youtube.com/@kameme_auto"

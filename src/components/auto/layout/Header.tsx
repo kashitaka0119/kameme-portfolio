@@ -16,12 +16,12 @@ export default function AutoHeader() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/images/kameme.png"
-              alt="かめめオート"
+              alt="かめめ - AIプログラミング"
               width={40}
               height={40}
               className="rounded-full"
             />
-            <span className="font-bold text-lg text-auto-primary">かめめオート</span>
+            <span className="font-bold text-lg text-auto-primary">かめめ</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -45,7 +45,7 @@ export default function AutoHeader() {
               href="/#contact"
               className="bg-auto-primary text-white px-4 py-2 rounded-lg hover:bg-auto-primary/90 transition-colors"
             >
-              無料相談
+              無料で相談する
             </Link>
           </div>
 
@@ -89,7 +89,7 @@ export default function AutoHeader() {
                 className="bg-auto-primary text-white px-4 py-3 rounded-lg hover:bg-auto-primary/90 transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                無料相談
+                無料で相談する
               </Link>
             </div>
           </div>

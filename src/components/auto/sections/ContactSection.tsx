@@ -59,7 +59,7 @@ export default function ContactSection() {
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">お問い合わせ</h2>
           <p className="text-secondary">
-            業務の自動化について、お気軽にご相談ください
+            AI開発・Claude Code活用について、お気軽にご相談ください
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function ContactSection() {
                 onChange={handleChange}
                 required
                 rows={6}
-                placeholder="自動化したい作業の内容、お困りごとなど、お気軽にご記入ください。"
+                placeholder="AI開発のご相談、お困りごとなど、お気軽にご記入ください。"
                 className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-auto-primary resize-none"
               />
             </div>

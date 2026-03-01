@@ -6,14 +6,16 @@ import {
   HiOutlineFolder,
   HiOutlineGlobe,
   HiOutlineCog,
+  HiOutlineCode,
+  HiOutlineSparkles,
 } from 'react-icons/hi'
 import type { Product, Guarantee, AutoNavItem, FAQ } from '@/types/auto'
 import type { PortfolioWork } from '@/types'
 
 export const AUTO_NAV_ITEMS: AutoNavItem[] = [
   { label: 'ホーム', href: '/' },
-  { label: '制作実績', href: '/#portfolio' },
-  { label: 'サービス内容', href: '/#services' },
+  { label: 'AI開発サービス', href: '/#services' },
+  { label: '実績・YouTube', href: '/#portfolio' },
   { label: 'ブログ', href: '/blog' },
   { label: 'よくある質問', href: '/#faq' },
   { label: 'お問い合わせ', href: '/#contact' },
@@ -40,6 +42,34 @@ export const PORTFOLIO_WORKS: PortfolioWork[] = [
     description: 'インターネット自動入力ツール',
     thumbnail: 'https://img.youtube.com/vi/F74evUgaykQ/maxresdefault.jpg',
     youtubeUrl: 'https://www.youtube.com/shorts/F74evUgaykQ',
+  },
+]
+
+// AI開発サービス（メインページ用）
+export interface AIService {
+  id: string
+  name: string
+  description: string
+  features: string[]
+  price: string
+  priceNote: string
+  icon: React.ReactNode
+}
+
+export const AI_SERVICES: AIService[] = [
+  {
+    id: 'it-consulting',
+    name: 'ITコンサルティング',
+    description: '業務効率化の提案から、業務効率化ツールの作成まで一貫してサポートします',
+    features: [
+      '業務効率化の提案・改善プラン策定',
+      '業務効率化ツールの作成',
+      'AIを活用した開発支援',
+      '継続的なサポート',
+    ],
+    price: '月額 ¥100,000',
+    priceNote: '相談・見積無料',
+    icon: <HiOutlineSparkles className="text-4xl" />,
   },
 ]
 
@@ -145,39 +175,27 @@ export const PRODUCT_CATEGORIES = [
 
 export const FAQS: FAQ[] = [
   {
-    question: '納品までの流れは？',
-    answer: 'お問い合わせ → ヒアリング → お見積り → 開発 → 納品の流れです。ヒアリングからお見積りまでは無料で対応いたします。開発期間は内容により異なりますが、シンプルなツールであれば1〜2週間程度です。',
+    question: 'Claude Codeとは何ですか？',
+    answer: 'Claude CodeはAnthropic社が提供するAIプログラミングツールです。自然言語で指示するだけで、プログラムを自動生成できます。プログラミング未経験の方でもアプリ開発が可能になります。',
+  },
+  {
+    question: 'バイブコーディングとは何ですか？',
+    answer: 'AIに自然言語で指示してプログラムを作成する新しい開発手法です。従来のプログラミング知識がなくても、アイデアをソフトウェアに変換できます。',
+  },
+  {
+    question: 'ITコンサルティングの流れは？',
+    answer: 'お問い合わせ → ヒアリング → ご提案 → 契約 → サポート開始の流れです。ヒアリングからご提案までは無料です。業務効率化の提案からツール作成まで一貫してサポートします。',
+  },
+  {
+    question: 'プログラミング未経験でも大丈夫ですか？',
+    answer: 'はい、大丈夫です。Claude Codeを使えば、プログラミングの知識がなくてもアプリを作ることができます。Kindle本で基礎から学べます。',
+  },
+  {
+    question: '月額料金に含まれる内容は？',
+    answer: '業務効率化の提案・改善プランの策定、業務効率化ツールの作成、継続的なサポートが含まれます。お客様の業務に合わせた最適なプランをご提案します。',
   },
   {
     question: '支払い方法は？',
     answer: '銀行振込で全額前払いとなります。サービスにご不満がありましたら、理由を問わず全額返金いたします。',
-  },
-  {
-    question: '全額返金保証とは？',
-    answer: 'ご購入後30日以内であれば、理由を問わずキャンセルできます。キャンセルの場合、料金の全額を14日以内に返金いたします。',
-  },
-  {
-    question: 'Excelマクロでできるのでは？',
-    answer: 'Excelマクロでは難しい、複数アプリをまたいだ操作、ファイルフォルダの操作、インターネットからのデータ収集、他のソフトとの連携などの複雑な作業が自動化できます。',
-  },
-  {
-    question: '業務内容が変わった場合、修正してもらえますか？',
-    answer: '納品後30日以内の軽微な修正は無料です。それ以降や大きな変更は有償にて対応いたします。お気軽にご相談ください。',
-  },
-  {
-    question: '対応しているWindowsバージョンは？',
-    answer: 'Windows 11に対応しています。',
-  },
-  {
-    question: 'カスタマイズは可能ですか？',
-    answer: 'はい、完全オーダーメイドであなただけのオリジナル自動化ツールを開発します。',
-  },
-  {
-    question: 'サポート期間はどのくらいですか？',
-    answer: '納品後30日間は無料で操作方法のご質問や、軽微な修正に対応いたします。',
-  },
-  {
-    question: '複数のPCで使用できますか？',
-    answer: '基本的に1ライセンス1PCとなりますが、複数PC利用のご相談も承っております。お気軽にお問い合わせください。',
   },
 ]

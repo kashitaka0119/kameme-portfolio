@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Header from '@/components/auto/layout/Header'
 import Footer from '@/components/layout/Footer'
 import HeroSection from '@/components/auto/sections/HeroSection'
+import TrustBadgeSection from '@/components/auto/sections/TrustBadgeSection'
 import PortfolioSection from '@/components/auto/sections/PortfolioSection'
-import GuaranteeSection from '@/components/auto/sections/GuaranteeSection'
-import ProductsSection from '@/components/auto/sections/ProductsSection'
+import ServicesSection from '@/components/auto/sections/ServicesSection'
 import BlogSection from '@/components/auto/sections/BlogSection'
 import FAQSection from '@/components/auto/sections/FAQSection'
 import ContactSection from '@/components/auto/sections/ContactSection'
@@ -13,32 +13,32 @@ import BookSection from '@/components/auto/sections/BookSection'
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://kameme.jp'),
   title: {
-    default: 'Windows自動化ツール販売 | かめめオート',
-    template: '%s | かめめオート'
+    default: 'Claude Code｜AIプログラミング｜かめめ',
+    template: '%s | かめめ'
   },
-  description: '業務効率化のためのWindows自動化ツール（exe）を販売。相談・見積無料、全額返金保証付き。Excel自動化、ファイル整理、Web自動化など。',
-  keywords: ['Windows自動化', 'exe', '業務効率化', 'RPA', 'マクロ', 'Excel自動化', 'Python'],
+  description: 'Claude Code専門家によるAIプログラミング。現役SE歴20年以上。Claude Codeを活用したAI開発ツール受託・バイブコーディングで開発を革新します。',
+  keywords: ['Claude Code', 'AIプログラミング', 'バイブコーディング', 'Vibe Coding', 'AI開発', 'AI開発ツール', 'フルスタックエンジニア', 'かめめ'],
   authors: [{ name: 'かめめ' }],
   creator: 'かめめ',
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
-    siteName: 'かめめオート',
-    title: 'Windows自動化ツール販売 | かめめオート',
-    description: '業務効率化のためのWindows自動化ツール（exe）を販売。相談・見積無料、全額返金保証付き。',
+    siteName: 'Claude Code｜AIプログラミング｜かめめ',
+    title: 'Claude Code｜AIプログラミング｜かめめ',
+    description: 'Claude Code専門家によるAIプログラミング。Claude Codeを活用したAI開発ツール受託・バイブコーディングで開発を革新。',
     images: [
       {
         url: '/images/kameme.png',
         width: 800,
         height: 800,
-        alt: 'かめめオート - Windows自動化ツール販売',
+        alt: 'Claude Code｜AIプログラミング｜かめめ',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Windows自動化ツール販売 | かめめオート',
-    description: '業務効率化のためのWindows自動化ツール（exe）を販売。相談・見積無料、全額返金保証付き。',
+    title: 'Claude Code｜AIプログラミング｜かめめ',
+    description: 'Claude Code専門家によるAIプログラミング。Claude Codeを活用したAI開発ツール受託・バイブコーディングで開発を革新。',
     images: ['/images/kameme.png'],
   },
   robots: {
@@ -62,11 +62,17 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'かめめオート',
+            '@type': 'ProfessionalService',
+            name: 'Claude Code｜AIプログラミング｜かめめ',
             url: 'https://kameme.jp',
             logo: 'https://kameme.jp/images/kameme.png',
-            description: '業務効率化のためのWindows自動化ツールを販売',
+            description: 'Claude Code専門家によるAIプログラミング。AI開発ツール受託を提供。',
+            founder: {
+              '@type': 'Person',
+              name: 'かめめ',
+              jobTitle: 'AIプログラミング専門家・フルスタックエンジニア',
+              knowsAbout: ['Claude Code', 'AIプログラミング', 'バイブコーディング', 'Python', 'Next.js', 'TypeScript', 'Azure'],
+            },
           }),
         }}
       />
@@ -74,9 +80,9 @@ export default function Home() {
       <main>
         <BookSection />
         <HeroSection />
+        <TrustBadgeSection />
+        <ServicesSection />
         <PortfolioSection />
-        <ProductsSection />
-        <GuaranteeSection />
         <BlogSection />
         <FAQSection />
         <ContactSection />

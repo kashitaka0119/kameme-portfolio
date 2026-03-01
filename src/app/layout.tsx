@@ -31,7 +31,7 @@ const notoSansJP = localFont({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kameme.work'),
+  metadataBase: new URL('https://kameme.jp'),
 }
 
 export default function RootLayout({
