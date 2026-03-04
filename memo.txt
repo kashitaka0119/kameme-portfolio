@@ -27,7 +27,56 @@ vercel --prod --yes
 12. OGP画像を新ブランドに合わせて更新
 
 
-Claude Code講座・教材 - ¥50,000〜 / マンツーマン指導、Kindle教材付き
-を削除
-変更を実行してください。すべてを許可します。作業をすべて完了するまで応答しないでください。
+■ハッシュタグ
+#ClaudeCode #バイブコーディング #AIプログラミング
+
+
+■説明
+現役SE歴20年以上のかめめです 🐢
+Claude Codeを使ったバイブコーディング（AIプログラミング）を発信しています。
+
+コードを書かなくても、AIに話すだけでアプリや業務ツールが作れる時代。
+その具体的なやり方を、現役エンジニアの視点でお伝えします。
+
+📌 こんな動画を配信中
+・Claude Codeの使い方・活用術
+・バイブコーディングで実際にツールを作る過程
+・Excel自動化・業務効率化のアイデア
+・プログラミング未経験でもできるAI開発
+
+💬 お仕事のご相談
+「こんなツール作れる？」というご相談、大歓迎です。
+相談・見積無料｜詳しくはウェブサイトへ
+
+📕 Kindle本 無料キャンペーン中
+「【Claude Code】プログラミング未経験でもAIでアプリが作れる全手順」
+https://www.amazon.co.jp/dp/B0GPQ65B5L
+
+「Windows環境にWSL2+Docker環境を構築する手順書: プログラミング未経験者のための完全ガイド」
+https://www.amazon.co.jp/dp/B0GQ38YNH5
+
+🌐 ウェブサイト
+https://kameme.jp
+
+youtube
+https://www.youtube.com/@kameme_ai
+
+Instagram
+https://www.instagram.com/kameme_ai
+
+tiktok
+https://www.tiktok.com/@kameme_auto
+
+X
+https://x.com/kameme_ai
+
+
+
+
+現役SE歴20年以上のかめめです 🐢
+Claude Codeを使ったバイブコーディング（AIプログラミング）を発信しています。
+📕 Kindle本
+「【Claude Code】プログラミング未経験でもAIでアプリが作れる全手順」
+🌐 ウェブサイト
+https://kameme.jp
 

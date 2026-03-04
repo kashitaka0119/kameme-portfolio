@@ -2,10 +2,10 @@ import Link from 'next/link'
 import { FaYoutube, FaInstagram, FaTiktok, FaXTwitter } from 'react-icons/fa6'
 
 const SNS_LINKS = [
-  { name: 'YouTube', url: 'https://www.youtube.com/@kameme_auto', icon: FaYoutube, color: '#FF0000' },
-  { name: 'Instagram', url: 'https://www.instagram.com/kameme_auto/', icon: FaInstagram, color: '#E4405F' },
+  { name: 'YouTube', url: 'https://www.youtube.com/@kameme_ai', icon: FaYoutube, color: '#FF0000' },
+  { name: 'Instagram', url: 'https://www.instagram.com/kameme_ai/', icon: FaInstagram, color: '#E4405F' },
   { name: 'TikTok', url: 'https://www.tiktok.com/@kameme_auto', icon: FaTiktok, color: '#000000' },
-  { name: 'X', url: 'https://x.com/kameme_auto', icon: FaXTwitter, color: '#000000' },
+  { name: 'X', url: 'https://x.com/kameme_ai', icon: FaXTwitter, color: '#000000' },
 ]
 
 export default function Footer() {

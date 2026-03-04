@@ -28,7 +28,8 @@
       "Bash(for d in 6 7 8 9 10 11 12)",
       "Bash(do)",
       "Bash(done)",
-      "WebFetch(domain:note.com)"
+      "WebFetch(domain:note.com)",
+      "WebFetch(domain:www.amazon.co.jp)"
     ]
   }
 }

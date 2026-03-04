@@ -42,7 +42,7 @@ export default function PortfolioSection() {
             Claude Code・AIプログラミングの動画を配信しています
           </p>
           <a
-            href="https://www.youtube.com/@kameme_auto"
+            href="https://www.youtube.com/@kameme_ai"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 mt-3 px-5 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-full transition-colors"
