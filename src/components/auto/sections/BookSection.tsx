@@ -65,8 +65,7 @@ const books: Book[] = [
 ]
 
 const videos: VideoItem[] = [
-  { videoId: 'HbZz7pSd6-w', title: '1分でわかるClaude Code入門', isShort: true },
-  { videoId: '8j0-Qnh36bU', title: 'Kindle本の内容を詳しく紹介', isShort: false },
+  { videoId: 'HbZz7pSd6-w', title: '【Claude Code×バイブコーディング】Excel内容一括置換ツールをコード書かずに作ってみた', isShort: true },
 ]
 
 // おすすめの読む順番
