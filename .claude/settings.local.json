@@ -29,7 +29,10 @@
       "Bash(do)",
       "Bash(done)",
       "WebFetch(domain:note.com)",
-      "WebFetch(domain:www.amazon.co.jp)"
+      "WebFetch(domain:www.amazon.co.jp)",
+      "Bash(grep -l \"kindle\\\\|amazon\\\\|book\" /workspaces/kameme-portfolio/content/blog/*.md -i)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(npx next build)"
     ]
   }
 }

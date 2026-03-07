@@ -14,6 +14,7 @@ import type { PortfolioWork } from '@/types'
 
 export const AUTO_NAV_ITEMS: AutoNavItem[] = [
   { label: 'ホーム', href: '/' },
+  { label: '書籍', href: '/#books' },
   { label: 'AI開発サービス', href: '/#services' },
   { label: '実績・YouTube', href: '/#portfolio' },
   { label: 'ブログ', href: '/blog' },
