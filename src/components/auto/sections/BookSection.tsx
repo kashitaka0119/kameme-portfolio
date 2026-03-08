@@ -65,7 +65,8 @@ const books: Book[] = [
 ]
 
 const videos: VideoItem[] = [
-  { videoId: 'HbZz7pSd6-w', title: '【Claude Code×バイブコーディング】Excel内容一括置換ツールをコード書かずに作ってみた', isShort: true },
+  { videoId: 'HbZz7pSd6-w', title: '【Claude Code×バイブコーディング】\nExcel内容一括置換ツールをコード書かずに作ってみた', isShort: true },
+  { videoId: 'RAQqMvSLnbo', title: '【Claude Code×バイブコーディング】\n本格カフェサイトをコード書かずに作ってみた', isShort: true },
 ]
 
 // おすすめの読む順番
@@ -134,7 +135,7 @@ export default function BookSection() {
                   {video.isShort ? 'Shorts 1分' : '詳しく解説'}
                 </span>
               </button>
-              <p className="text-white/70 text-sm font-medium">{video.title}</p>
+              <p className="text-white/70 text-sm font-medium whitespace-pre-line">{video.title}</p>
             </div>
           ))}
         </div>
