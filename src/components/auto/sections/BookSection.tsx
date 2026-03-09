@@ -48,7 +48,7 @@ const books: Book[] = [
     title: '本格カフェサイトが作れる全手順',
     subtitle: '【Claude Code】プログラミング未経験でも本格カフェサイトが作れる全手順',
     description: 'Claude Codeを使って、おしゃれなカフェのホームページを一から作成・公開する全手順を解説。',
-    url: 'https://www.amazon.co.jp/dp/B0GR4KBD4Y',
+    url: 'https://amzn.to/4rgdesd',
     coverImage: '/images/books/cafe-book.jpg',
     tags: ['Claude Code', 'Webサイト', 'Next.js'],
   },
