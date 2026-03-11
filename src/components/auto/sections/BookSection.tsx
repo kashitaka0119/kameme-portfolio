@@ -26,15 +26,22 @@ type VideoItem = {
 
 const books: Book[] = [
   {
+    title: '本格ホームページが作れる全手順',
+    subtitle: '【Claude Code】プログラミング未経験でも本格ホームページが作れる全手順',
+    description: 'Claude Codeを使って、おしゃれなカフェのホームページを一から作成・公開する全手順を解説。',
+    url: 'https://amzn.to/4rgdesd',
+    coverImage: '/images/books/cafe-book.jpg',
+    badge: 'おすすめ',
+    badgeColor: 'bg-orange-500',
+    tags: ['Claude Code', 'Webサイト', 'Next.js'],
+  },
+  {
     title: 'AIでアプリが作れる全手順',
     subtitle: '【Claude Code】プログラミング未経験でもAIでアプリが作れる全手順',
     description: 'Claude Codeの導入から実践まで。AIに日本語で指示するだけでアプリが作れる全手順を解説。',
     url: 'https://amzn.to/4l35cBa',
     coverImage: '/images/books/app-book.jpg',
-    badge: '人気No.1',
-    badgeColor: 'bg-orange-500',
-    tags: ['Claude Code', '入門', 'Next.js'],
-    recommended: true,
+    tags: ['Claude Code', '入門', 'Python'],
   },
   {
     title: 'WSL2+Docker環境構築ガイド',
@@ -43,14 +50,6 @@ const books: Book[] = [
     url: 'https://amzn.to/4roEk0p',
     coverImage: '/images/books/wsl2-docker-book.jpg',
     tags: ['WSL2', 'Docker', 'Windows'],
-  },
-  {
-    title: '本格カフェサイトが作れる全手順',
-    subtitle: '【Claude Code】プログラミング未経験でも本格カフェサイトが作れる全手順',
-    description: 'Claude Codeを使って、おしゃれなカフェのホームページを一から作成・公開する全手順を解説。',
-    url: 'https://amzn.to/4rgdesd',
-    coverImage: '/images/books/cafe-book.jpg',
-    tags: ['Claude Code', 'Webサイト', 'Next.js'],
   },
   {
     title: '本格WEBアプリが作れる全手順',
@@ -65,15 +64,15 @@ const books: Book[] = [
 ]
 
 const videos: VideoItem[] = [
+  { videoId: 'RAQqMvSLnbo', title: '【Claude Code×バイブコーディング】\n本格ホームページをコード書かずに作ってみた', isShort: true },
   { videoId: 'HbZz7pSd6-w', title: '【Claude Code×バイブコーディング】\nExcel内容一括置換ツールをコード書かずに作ってみた', isShort: true },
-  { videoId: 'RAQqMvSLnbo', title: '【Claude Code×バイブコーディング】\n本格カフェサイトをコード書かずに作ってみた', isShort: true },
 ]
 
 // おすすめの読む順番
 const readingOrder = [
   { step: 1, title: 'AIでアプリが作れる全手順', description: 'Claude Codeの基本を習得' },
   { step: 2, title: 'WSL2+Docker環境構築', description: '開発環境を準備' },
-  { step: 3, title: '本格カフェサイトが作れる全手順', description: '実践プロジェクトに挑戦' },
+  { step: 3, title: '本格ホームページが作れる全手順', description: '実践プロジェクトに挑戦' },
 ]
 
 function trackAmazonClick(bookTitle: string) {
@@ -237,11 +236,7 @@ export default function BookSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackAmazonClick(book.title)}
-                  className={`inline-flex items-center justify-center gap-2 font-bold py-2.5 px-6 rounded-full transition-all duration-200 text-sm
-                    ${book.recommended
-                      ? 'bg-orange-500 text-white hover:bg-orange-600 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5'
-                      : 'bg-white/20 text-white hover:bg-white/30'
-                    }`}
+                  className="inline-flex items-center justify-center gap-2 font-bold py-2.5 px-6 rounded-full transition-all duration-200 text-sm bg-orange-500 text-white hover:bg-orange-600 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   Amazonで見る
                 </a>
