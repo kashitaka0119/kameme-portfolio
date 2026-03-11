@@ -191,15 +191,27 @@ export default function BookSection() {
 
               {/* 表紙画像 */}
               {book.coverImage ? (
-                <div className="relative w-full aspect-7/10 mb-4 rounded-lg overflow-hidden shadow-lg bg-white/5">
-                  <Image
-                    src={book.coverImage}
-                    alt={book.subtitle}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
-                </div>
+                book.url ? (
+                  <a href={book.url} target="_blank" rel="noopener noreferrer" onClick={() => trackAmazonClick(book.title)} className="relative w-full aspect-7/10 mb-4 rounded-lg overflow-hidden shadow-lg bg-white/5 block cursor-pointer hover:opacity-80 transition-opacity">
+                    <Image
+                      src={book.coverImage}
+                      alt={book.subtitle}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                  </a>
+                ) : (
+                  <div className="relative w-full aspect-7/10 mb-4 rounded-lg overflow-hidden shadow-lg bg-white/5">
+                    <Image
+                      src={book.coverImage}
+                      alt={book.subtitle}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                  </div>
+                )
               ) : (
                 <div className="w-full aspect-7/10 mb-4 rounded-lg bg-white/10 flex items-center justify-center">
                   <span className="text-white/30 text-sm">Coming Soon</span>
@@ -208,7 +220,13 @@ export default function BookSection() {
 
               {/* タイトル */}
               <h3 className="text-white font-bold text-lg mb-2 leading-tight">
-                {book.title}
+                {book.url ? (
+                  <a href={book.url} target="_blank" rel="noopener noreferrer" onClick={() => trackAmazonClick(book.title)} className="hover:text-orange-300 transition-colors">
+                    {book.title}
+                  </a>
+                ) : (
+                  book.title
+                )}
               </h3>
 
               {/* 説明 */}
