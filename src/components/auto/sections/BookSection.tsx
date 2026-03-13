@@ -1,9 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import Image from 'next/image'
 import { HiOutlineBookOpen } from 'react-icons/hi2'
 import { HiOutlinePlay, HiX } from 'react-icons/hi'
+
+// 無料キャンペーン期間（日本時間 JST = UTC+9）
+const CAMPAIGN_START = new Date('2025-03-18T08:00:00Z') // JST 17:00
+const CAMPAIGN_END = new Date('2025-03-22T07:59:00Z')   // JST 16:59
 
 type Book = {
   title: string
@@ -86,6 +90,11 @@ function trackAmazonClick(bookTitle: string) {
 
 export default function BookSection() {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null)
+
+  const isCampaignActive = useMemo(() => {
+    const now = new Date()
+    return now >= CAMPAIGN_START && now <= CAMPAIGN_END
+  }, [])
 
   return (
     <section id="books" className="bg-linear-to-b from-blue-600 via-indigo-700 to-indigo-800 py-14 px-4">
@@ -183,11 +192,15 @@ export default function BookSection() {
               } hover:-translate-y-1`}
             >
               {/* バッジ */}
-              {book.badge && (
+              {isCampaignActive && book.title === '本格ホームページが作れる全手順' ? (
+                <a href="/free-homepage-book" className="absolute -top-3 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse hover:bg-red-600 transition-colors">
+                  無料キャンペーン中！
+                </a>
+              ) : book.badge ? (
                 <span className={`absolute -top-3 left-4 ${book.badgeColor} text-white text-xs font-bold px-3 py-1 rounded-full shadow-md`}>
                   {book.badge}
                 </span>
-              )}
+              ) : null}
 
               {/* 表紙画像 */}
               {book.coverImage ? (
@@ -248,6 +261,13 @@ export default function BookSection() {
                 <div className="text-center text-white/40 text-sm font-medium py-2.5">
                   近日発売予定
                 </div>
+              ) : isCampaignActive && book.title === '本格ホームページが作れる全手順' ? (
+                <a
+                  href="/free-homepage-book"
+                  className="inline-flex items-center justify-center gap-2 font-bold py-2.5 px-6 rounded-full transition-all duration-200 text-sm bg-red-500 text-white hover:bg-red-600 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  無料ダウンロード
+                </a>
               ) : (
                 <a
                   href={book.url}
