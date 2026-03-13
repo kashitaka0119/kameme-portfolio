@@ -32,7 +32,8 @@
       "WebFetch(domain:www.amazon.co.jp)",
       "Bash(grep -l \"kindle\\\\|amazon\\\\|book\" /workspaces/kameme-portfolio/content/blog/*.md -i)",
       "Bash(npx tsc --noEmit)",
-      "Bash(npx next build)"
+      "Bash(npx next build)",
+      "Bash(du -sh /workspaces/kameme-portfolio/.my_doc/*/)"
     ]
   }
 }
